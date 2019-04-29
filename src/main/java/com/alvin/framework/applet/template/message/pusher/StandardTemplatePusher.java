@@ -169,6 +169,7 @@ public class StandardTemplatePusher implements TemplatePusher {
             if (accessToken != null) {
                 String formId = formIdProvider.getValidFormId(openId);
                 if (formId != null) {
+                    templateMessage.setForm_id(formId);
                     String url = String.format(APPLET_TEMPLATE_SEND_URL, accessToken);
                     try {
                         String httpResponse = httpPoster.post(url, JSONObject.toJSONString(templateMessage));
