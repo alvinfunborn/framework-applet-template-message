@@ -17,10 +17,6 @@ public enum TemplateMessageStatus {
      */
     accumulating,
     /**
-     * discard after exceeding push limit
-     */
-    discard,
-    /**
      * pushing
      */
     pushing,
